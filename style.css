@@ -241,8 +241,8 @@ overflow: hidden;
 .basket-dialog .basket-dialog-content {
     z-index: 1;
     margin: 0px;
-    height: calc(100% - 70px);
-    width: calc(100% - 150px);
+    height: calc(100% - 290px);
+    width: calc(100% - 280px);
     border-radius: 24px;
     background: #fff
 }
