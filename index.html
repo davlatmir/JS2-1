@@ -7,6 +7,15 @@
     <script src="https://kit.fontawesome.com/7aae2eb976.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="basket-dialog" id="basket-dialog">
+        <div class="basket-dialog-back" onclick="popupBasket()">
+        </div>
+
+        <div class="basket-dialog-content">
+            Test
+        </div>
+    </div>
+
     <header class="header">
         <div class="header__top">
             <div class="header__topLink">
@@ -29,7 +38,7 @@
                 </ul>
             </div>
             <div class="header__bottomButton">
-                <button class="cart-button">Корзина</button>
+                <button class="cart-button" onclick="popupBasket()">Корзина</button>
             </div>
         </div>
     </header>

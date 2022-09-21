@@ -205,6 +205,44 @@ footer {
     box-shadow: none;
 }
 
+.product-item {
+overflow: hidden;
+
+    
+}
+
 .product-img {
     border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 60%;
+}
+
+.basket-dialog {
+    margin: 0px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: #00000044;
+    display: none;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-dialog-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.basket-dialog .basket-dialog-content {
+    z-index: 1;
+    margin: 0px;
+    height: calc(100% - 70px);
+    width: calc(100% - 150px);
+    border-radius: 24px;
+    background: #fff
 }
