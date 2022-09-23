@@ -246,3 +246,18 @@ overflow: hidden;
     border-radius: 24px;
     background: #fff
 }
+
+
+ .whole-cart-window{
+    border: solid lightgray 1px;
+    border-top: none;
+    position: fixed;
+    top: 125px;
+    right: 400px;
+    background-color: #fff;
+    z-index: 999999;
+ }
+
+ .hide {
+    display: none;
+ }
