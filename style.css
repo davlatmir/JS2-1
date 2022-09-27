@@ -244,20 +244,44 @@ overflow: hidden;
     height: calc(100% - 290px);
     width: calc(100% - 280px);
     border-radius: 24px;
-    background: #fff
+    background: #fff;
+    overflow: auto;
 }
 
 
- .whole-cart-window{
-    border: solid lightgray 1px;
+ .whole-cart-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 3px 12px;
     border-top: none;
-    position: fixed;
     top: 125px;
     right: 400px;
-    background-color: #fff;
     z-index: 999999;
+    border-bottom: 1px dashed #00000040;
+
  }
 
- .hide {
+ .basket-dialog {
     display: none;
  }
+
+.mini-cardImg {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+    margin: 0px 4px 12px 0px;
+}
+
+.h2-sh-b{ 
+    margin-left: 12px;
+}
+
+.itemName {
+    /* margin-top: 17px;
+    margin-bottom: 10px; */
+}
+
+.quantity {
+    margin-top: 10px;
+}
