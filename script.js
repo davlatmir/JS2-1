@@ -57,6 +57,8 @@ class Product {
             }
 
         }
+        totalCartPrice()
+        
     }
 
     update() {
@@ -64,11 +66,12 @@ class Product {
             var price = this.dom.querySelector(".price"),
                 quantity = this.dom.querySelector(".quantity");
             if (price && quantity) {
-                price.innerText = `Price: ${this.price} (${this.price * this.quantity})`;
+                price.innerText = `Price: ${this.price}руб (${this.price * this.quantity}руб)`;
                 quantity.innerText = `Quantity: ${this.quantity}`;
                 console.log(priceTotal)
             }
         }
+        totalCartPrice()
     }
 
     increment() {
@@ -76,13 +79,14 @@ class Product {
         priceTotal += this.price
         this.update();
         console.log(this)
+        
     }
 
     decrement() {
         this.quantity -= 1
         priceTotal -= this.price
 
-        if (this.quantity > 1) {
+        if (this.quantity > 0) {
         } else {
             this.dom.remove()
             var productIndex = basket.findIndex(arrItem => arrItem.id == this.id);
@@ -91,7 +95,10 @@ class Product {
             }
         }
         this.update();
+        
+        
     }
+
 }
 
 
@@ -100,6 +107,7 @@ let isBasketPopuped = false
 function popupBasket() {
     isBasketPopuped = !isBasketPopuped
     document.getElementById('basket-dialog').style.display = isBasketPopuped ? 'flex' : ''
+  
 }
 
 
@@ -126,12 +134,22 @@ function addToBasket(id) {
 // priceTotal-а нишон тияд и количество товаров в корзине
 
 
+function totalCartPrice() {
+    let totalPrice = document.getElementById('goods-list__total'); 
+    let sum = 0;
+    basket.forEach (element => { 
+        sum += element.price * element.quantity
+    });
+    totalPrice.innerText = `Итого  ${sum} рублей`;
+}
+
+totalCartPrice()
+/*
 function updateUI () {
     dom.innerText = priceTotal
 }
 
-
-
+*/
 
 
 

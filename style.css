@@ -246,8 +246,13 @@ overflow: hidden;
     border-radius: 24px;
     background: #fff;
     overflow: auto;
+    position: relative;
 }
 
+#goods-list__total {
+    margin-top: 15px;
+    margin-left: 15px;
+  }
 
  .whole-cart-item {
     display: flex;
@@ -285,3 +290,5 @@ overflow: hidden;
 .quantity {
     margin-top: 10px;
 }
+
+
