@@ -7,6 +7,8 @@ var products = [];
 
 const API = 'https://raw.githubusercontent.com/davlatmir/JS2-1/hw_js2_1'
 
+
+
 function loadJson() {
     return fetch(`${API}/data.json`)
         .then(result => result.json())
@@ -20,6 +22,7 @@ loadJson().then(data => {
     renderProducts(products);
 }).catch(err => {
     
+
 })
 
 class Product {
